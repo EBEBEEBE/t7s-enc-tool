@@ -1,0 +1,31 @@
+# Python-generated files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Test and tooling caches
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Local application state and sensitive keys
+settings.json
+key.txt
+keys.txt
+assetcrypt_queue.csv
+
+# Local debug captures and build output
+.about-debug.png
+packed_gui_stdout.txt
+packed_gui_stderr.txt
+build/
+dist/
+*.spec.bak
+
+# IDE and operating-system files
+.idea/
+.vscode/
+*.swp
+Thumbs.db
+.DS_Store
