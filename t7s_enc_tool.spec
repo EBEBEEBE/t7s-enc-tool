@@ -1,5 +1,6 @@
-# PyInstaller build description. ABOUT.md and license resources are intentionally
-# included as external files because the About page loads them at runtime.
+# PyInstaller build description. Documentation and license resources are
+# intentionally included as external files because the About and Help pages
+# load them at runtime.
 from pathlib import Path
 
 project = Path(SPECPATH)
@@ -10,6 +11,8 @@ a = Analysis(
     binaries=[],
     datas=[
         (str(project / "ABOUT.md"), "."),
+        (str(project / "README.md"), "."),
+        (str(project / "docs" / "QUICKSTART.md"), "docs"),
         (str(project / "LICENSE"), "."),
         (str(project / "THIRD_PARTY_NOTICES.md"), "."),
         (str(project / "DISCLAIMER.md"), "."),

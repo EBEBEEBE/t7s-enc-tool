@@ -8,7 +8,7 @@ from services.tempfiles import TempFileService
 
 from .main_page import MainPage
 from .about_page import AboutPage
-from .pages import PlaceholderPage
+from .help_page import HelpPage
 from .settings_page import SettingsPage
 
 
@@ -30,6 +30,7 @@ class MainWindow(QMainWindow):
         self.stack = QStackedWidget()
         self.stack.addWidget(self.main_page)
         self.stack.addWidget(self.settings_page)
+        self.stack.addWidget(HelpPage())
         self.stack.addWidget(AboutPage())
 
         sidebar = QWidget()
@@ -41,7 +42,7 @@ class MainWindow(QMainWindow):
         brand.setObjectName("brand")
         # brand.setEnabled(False)
         side_layout.addWidget(brand)
-        for index, label in enumerate(("Main", "Settings", "About")):
+        for index, label in enumerate(("Main", "Settings", "Help", "About")):
             button = QPushButton(label)
             button.setObjectName("navButton")
             button.setCheckable(True)
@@ -62,7 +63,7 @@ class MainWindow(QMainWindow):
     def _show_page(self, index: int):
         self.stack.setCurrentIndex(index)
         for button in self.findChildren(QPushButton, "navButton"):
-            button.setChecked(button.text() == ("Main", "Settings", "About")[index])
+            button.setChecked(button.text() == ("Main", "Settings", "Help", "About")[index])
 
     def closeEvent(self, event):
         self.main_page.cleanup()

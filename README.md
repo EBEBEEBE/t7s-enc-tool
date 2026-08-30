@@ -94,6 +94,7 @@ command-line help for the installed version.
 
 ## Project information
 
+- [Quickstart Guide](docs/QUICKSTART.md)
 - [About, licensing, and acknowledgements](ABOUT.md)
 - [Full disclaimer](DISCLAIMER.md)
 - [Third-party notices](THIRD_PARTY_NOTICES.md)
